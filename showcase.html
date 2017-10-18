@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Caramel</title>
+    <meta name="author" content="lumios">
+    <meta name="description" content="a simple, beautiful, modern web framework.">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <link href="css/caramel.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600' rel='stylesheet' type='text/css'>
+    <style>
+        body{font-family: 'Open Sans', sans-serif;padding-top:20px;}
+        #example .box, .full{background-color: #EEE;text-align: center;}
+        .full:nth-child(even){background-color: #DDD;}
+        .header .logo a{padding: 5px 20px 0}
+        .header .logo a:hover{background: 0 0}
+        .main .header{margin: 100px 0 70px;text-align: center}
+        .main .header h1{margin-top: 0}
+        .fa.fa-code{font-size: 16px}
+        .title{display:block;font-size: 60px;font-weight: 300;}
+        .container, main {max-width: 1000px;}
+        footer{text-align: center;}
+    </style>
+  </head>
+<body>
+    <nav class="nav bar thick fixed">
+        <ul>
+            <li class="collapse"><a href="#" class="menu"><i class="fa fa-bars"></i></a></li>
+            <li class="brand">
+                <a href="#"><svg version="1.1" width="30px" height="26px" viewBox="0 0 48 48">
+                    <g transform="translate(0,-1004.3622)">
+                        <g transform="translate(-6,1003)">
+                            <path fill="#B7806C" d="M30,2.518l-20,10l20,10l20-10 L30,2.518z"/>
+                            <path fill="#B7785C" d="M30,22.362v25l20-10v-25 L30,22.362z"/>
+                            <path fill="#8E5B42" d="M30,22.362v25l-20-10v-25 L30,22.362z"/>
+                            <path fill="none" stroke="#4D4D4D" d="M30,2.375l-20,10v25l20,10l20-10v-25 L30,2.375z"/>
+                        </g>
+                    </g>
+                </svg></a>
+            </li>
+            <li><a href="http://caramel.ga/">Home</a></li>
+            <li><a href="http://caramel.ga/start.html">Get Started</a></li>
+            <li><a href="http://caramel.ga/showcase.html">Showcase</a></li>
+            <ul class="right">
+                <li class="dropdown"><a href="#" class="dropdownitem"><i class="fa fa-chevron-down fa-fw"></i></a>
+                    <ul>
+                        <li><a href="#buttons">Buttons</a></li>
+                        <li><a href="#navigation">Navigation</a></li>
+                        <li><a href="#alerts">Alerts</a></li>
+                        <li><a href="#notices">Notices</a></li>
+                        <li><a href="#panels">Panels</a></li>
+                        <li><a href="#breadcrumbs">Breadcrumbs</a></li>
+                        <li><a href="#images">Images</a></li>
+                        <li><a href="#tables">Tables</a></li>
+                        <li><a href="#progress-bars">Progress Bars</a></li>
+                        <li><a href="#pagination">Pagination</a></li>
+                        <li><a href="#forms">Forms</a></li>
+                        <li><a href="#grid">Grid</a></li>
+                    </ul>
+                </li>
+                <li><a href="http://github.com/kurisubrooks/caramel"><i class="fa fa-github-alt fa-fw"></i></a></li>
+            </ul>
+        </ul>
+    </nav>
+
+    <main class="main">
+        <div class="header">
+          <svg version="1.1" width="100px" height="100px" viewBox="0 0 48 48">
+            <g transform="translate(0,-1004.3622)">
+              <g transform="translate(-6,1003)">
+                <path fill="#B7806C" d="M30,2.518l-20,10l20,10l20-10 L30,2.518z"/>
+                <path fill="#B7785C" d="M30,22.362v25l20-10v-25 L30,22.362z"/>
+                <path fill="#8E5B42" d="M30,22.362v25l-20-10v-25 L30,22.362z"/>
+                <path fill="none" stroke="#4D4D4D" d="M30,2.375l-20,10v25l20,10l20-10v-25 L30,2.375z"/>
+              </g>
+            </g>
+          </svg>
+
+          <div class="title" id="caramel">Caramel</div>
+
+        </div>
+
+        <hr>
+
+        <h3 id="buttons">Buttons</h3>
+
+        <button class="btn default">Default</button>
+        <button class="btn success">Success</button>
+        <button class="btn error">Error</button>
+        <button class="btn warn">Warning</button>
+        <button class="btn info">Info</button>
+        <button class="btn dark">Dark</button>
+
+        <br>
+
+        <button class="btn default sml">Default</button>
+        <button class="btn success sml">Success</button>
+        <button class="btn error sml">Error</button>
+        <button class="btn warn sml">Warning</button>
+        <button class="btn info sml">Info</button>
+        <button class="btn dark sml">Dark</button>
+
+        <pre>
+&lt;button class="btn <span class="color error">$color</span>"&gt;<span class="color error">...</span>&lt;/button&gt;
+&lt;button class="btn <span class="color error">$color</span> sml"&gt;<span class="color error">...</span>&lt;/button&gt;</pre>
+
+        <br>
+
+        <button class="btn default clean">Default</button>
+        <button class="btn success clean">Success</button>
+        <button class="btn error clean">Error</button>
+        <button class="btn warn clean">Warning</button>
+        <button class="btn info clean">Info</button>
+        <button class="btn dark clean">Dark</button>
+
+        <br>
+
+        <button class="btn default clean sml">Default</button>
+        <button class="btn success clean sml">Success</button>
+        <button class="btn error clean sml">Error</button>
+        <button class="btn warn clean sml">Warning</button>
+        <button class="btn info clean sml">Info</button>
+        <button class="btn dark clean sml">Dark</button>
+
+        <pre>&lt;button class="btn <span class="color error">$color</span> clean"&gt;<span class="color error">...</span>&lt;/button&gt;<br>&lt;button class="btn <span class="color error">$color</span> clean sml"&gt;<span class="color error">...</span>&lt;/button&gt;</pre>
+
+        <br>
+
+        <div class="nav btn dropdown">
+            <button class="btn dropdownitem default">Default &#x25BE;</button>
+            <ul>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+            </ul>
+        </div>
+        <div class="nav btn dropdown">
+            <button class="btn dropdownitem success">Success &#x25BE;</button>
+            <ul>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+            </ul>
+        </div>
+        <div class="nav btn dropdown">
+            <button class="btn dropdownitem error">Error &#x25BE;</button>
+            <ul>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+            </ul>
+        </div>
+        <div class="nav btn dropdown">
+            <button class="btn dropdownitem warn">Warning &#x25BE;</button>
+            <ul>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+            </ul>
+        </div>
+        <div class="nav btn dropdown">
+            <button class="btn dropdownitem info">Info &#x25BE;</button>
+            <ul>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+            </ul>
+        </div>
+        <div class="nav btn dropdown">
+            <button class="btn dropdownitem dark">Dark &#x25BE;</button>
+            <ul>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+            </ul>
+        </div>
+        <div class="nav btn dropdown">
+            <button class="btn dropdownitem default clean">Clean &#x25BE;</button>
+            <ul>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+            </ul>
+        </div>
+
+        <pre>&lt;div class="nav btn dropdown"&gt;
+    &lt;button class="btn dropdownitem <span class="color error">$color</span>"&gt;<span class="color error">...</span>&lt;/button&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="<span class="color error">#</span>"&gt;<span class="color error">...</span>&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="<span class="color error">#</span>"&gt;<span class="color error">...</span>&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="<span class="color error">#</span>"&gt;<span class="color error">...</span>&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</pre>
+
+        <hr>
+
+        <h3 id="navigation">Navigation</h3>
+
+        <h6>Thick</h6><br>
+        <nav class="nav bar thick">
+            <ul>
+                <li class="collapse"><a href="#" class="menu"><i class="fa fa-bars"></i></a></li>
+                <li class="brand"><a href="#">Brand</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li class="dropdown"><a href="#" class="dropdownitem">Dropdown &#x25BE;</a>
+                    <ul>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                    </ul>
+                </li>
+                <ul class="right">
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                </ul>
+            </ul>
+        </nav>
+
+        <br>
+
+        <nav class="nav bar thick dark">
+            <ul>
+                <li class="collapse"><a href="#" class="menu"><i class="fa fa-bars"></i></a></li>
+                <li class="brand"><a href="#">Brand</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li class="dropdown"><a href="#" class="dropdownitem">Dropdown &#x25BE;</a>
+                    <ul>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                    </ul>
+                </li>
+                <ul class="right">
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                </ul>
+            </ul>
+        </nav>
+
+        <br><br>
+
+        <h6>Normal</h6><br>
+        <nav class="nav bar">
+            <ul>
+                <li class="collapse"><a href="#" class="menu"><i class="fa fa-bars"></i></a></li>
+                <li class="brand"><a href="#">Brand</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li class="dropdown"><a href="#" class="dropdownitem">Dropdown &#x25BE;</a>
+                    <ul>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                    </ul>
+                </li>
+                <ul class="right">
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                </ul>
+            </ul>
+        </nav>
+
+		<br>
+
+        <nav class="nav bar dark">
+            <ul>
+                <li class="collapse"><a href="#" class="menu"><i class="fa fa-bars"></i></a></li>
+                <li class="brand"><a href="#">Brand</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li class="dropdown"><a href="#" class="dropdownitem">Dropdown &#x25BE;</a>
+                    <ul>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                    </ul>
+                </li>
+                <ul class="right">
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                </ul>
+            </ul>
+        </nav>
+
+        <pre>&lt;nav class="nav bar <span class="color error">$style</span> <span class="color error">$color</span>"&gt;
+    &lt;ul&gt;
+        &lt;li class="collapse"&gt;&lt;a href="#" class="menu"&gt;&lt;i class="fa fa-bars"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+
+        // Brand or Logo
+        &lt;li class="brand"&gt;&lt;a href="<span class="color error">#</span>"&gt;<span class="color error">...</span>&lt;/a&gt;&lt;/li&gt;
+
+        // Navigation Items
+        &lt;li&gt;&lt;a href="<span class="color error">#</span>"&gt;<span class="color error">...</span>&lt;/a&gt;&lt;/li&gt;
+
+        // Dropdown Menu
+        &lt;li class="dropdown"&gt;&lt;a href="#" class="dropdownitem"&gt;Dropdown&lt;/a&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="<span class="color error">#</span>"&gt;<span class="color error">...</span>&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+
+        // Right Aligned Navigation Items
+        &lt;ul class="right"&gt;
+            &lt;li&gt;&lt;a href="<span class="color error">#</span>"&gt;<span class="color error">...</span>&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</pre>
+
+        <hr>
+
+        <h3 id="alerts">Alerts</h3>
+
+        <div class="alert default"><b>Default:</b> A little plain, isn't it?</div>
+        <div class="alert success"><b>Success!</b> Congratulations, it works!</div>
+        <div class="alert error"><b>Error.</b> You broke it. You have no one to blame but yourself!</div>
+        <div class="alert warn"><b>Warning:</b> Something went wrong!</div>
+        <div class="alert info"><b>Info:</b> Did you know, Bacon is more delicious in Canada?</div>
+        <div class="alert dark"><b>Dark:</b> Deep Space Nine.</div>
+        <div class="alert default clean"><b>Clean:</b> Incase your boss says your style is 'childish', and you need more 'professionalism'.</div>
+
+        <pre>&lt;div class="alert <span class="color error">$color</span>"&gt;
+    <span class="color error">...</span>
+&lt;/div&gt;</pre>
+
+        <hr>
+
+        <h3 id="notices">Notices</h3>
+
+        <div class="notice default"><b>Default:</b> A little plain, isn't it?</div>
+        <div class="notice success"><b>Success!</b> Congratulations, it works!</div>
+        <div class="notice error"><b>Error.</b> You broke it. You have no one to blame but yourself!</div>
+        <div class="notice warn"><b>Warning:</b> Something went wrong!</div>
+        <div class="notice info"><b>Info:</b> Did you know, Bacon is more delicious in Canada?</div>
+        <div class="notice dark"><b>Dark:</b> Deep Space Nine.</div>
+
+        <pre>&lt;div class="notice <span class="color error">$color</span>"&gt;
+    <span class="color error">...</span>
+&lt;/div&gt;</pre>
+
+        <hr>
+
+        <h3 id="panels">Panels</h3>
+
+        <div class="panel">
+            <div class="panel-head">Default:</div>
+            <div class="panel-body">
+                A little plain, isn't it?
+            </div>
+        </div>
+
+        <div class="panel success">
+            <div class="panel-head">Success!</div>
+            <div class="panel-body">
+                Congratulations, it works!
+            </div>
+        </div>
+
+        <div class="panel error">
+            <div class="panel-head">Error.</div>
+            <div class="panel-body">
+                You broke it. You have no one to blame but yourself!
+            </div>
+        </div>
+
+        <div class="panel warn">
+            <div class="panel-head">Warning:</div>
+            <div class="panel-body">
+                Something went wrong!
+            </div>
+        </div>
+
+        <div class="panel info">
+            <div class="panel-head">Info:</div>
+            <div class="panel-body">
+                Did you know, Bacon is more delicious in Canada?
+            </div>
+        </div>
+
+        <div class="panel dark">
+            <div class="panel-head">Dark:</div>
+            <div class="panel-body">
+                Deep Space Nine.
+            </div>
+        </div>
+
+        <pre>&lt;div class="panel <span class="color error">$color</span>"&gt;
+    &lt;div class="panel-head"&gt;<span class="color error">...</span>&lt;/div&gt;
+    &lt;div class="panel-body"&gt;<span class="color error">...</span>&lt;/div&gt;
+&lt;/div&gt;</pre>
+
+        <hr>
+
+        <h3 id="dismissables">Dismissables</h3>
+
+        <div class="notice warn" id="note">
+            <div class="dismiss"><i class="fa fa-close"></i></div>
+            <b>Warning:</b> Something went wrong!
+        </div>
+
+        <div class="alert warn" id="note">
+            <div class="dismiss"><i class="fa fa-close"></i></div>
+            <b>Warning:</b> Something went wrong!
+        </div>
+
+        <pre>&lt;div class="notice <span class="color error">$color</span>" id="note"&gt;
+    &lt;div class="dismiss"&gt;&lt;i class="fa fa-close"&gt;&lt;/i&gt;&lt;/div&gt;
+    <span class="color error">...</span>
+&lt;/div&gt;</pre>
+
+        <hr>
+
+        <h3 id="breadcrumbs">Breadcrumbs</h3>
+
+        <div class="breadcrumbs">
+            <ol>
+                <li><a href="#">caramel</a></li>
+                <li><a href="#">src</a></li>
+                <li><a href="#">css</a></li>
+                <li class="active">caramel.scss</li>
+            </ol>
+        </div>
+
+        <pre>&lt;div class="breadcrumbs"&gt;
+    &lt;ol&gt;
+        &lt;li&gt;&lt;a href="<span class="color error">#</span>"&gt;<span class="color error">...</span>&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="<span class="color error">#</span>"&gt;<span class="color error">...</span>&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="active"&gt;<span class="color error">...</span>&lt;/li&gt;
+    &lt;/ol&gt;
+&lt;/div&gt;</pre>
+
+        <hr>
+
+        <h3 id="images">Images</h3>
+
+        <img src="http://placehold.it/150x150" class="img thumbnail" />
+        <img src="http://placehold.it/150x150" class="img thumbnail circle" />
+        <img src="http://placehold.it/150x150" class="img round" />
+        <img src="http://placehold.it/150x150" class="img circle" />
+
+        <br>
+
+        <pre>&lt;img src="<span class="color error">#</span>" class="img thumbnail"&gt;
+&lt;img src="<span class="color error">#</span>" class="img thumbnail circle"&gt;</pre>
+
+        <hr>
+
+        <h3 id="tables">Tables</h3>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Alias</th>
+                    <th>GitHub User</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Kurisu</td>
+                    <td>kurisubrooks</td>
+                    <td><a href="http://github.com/kurisubrooks">kurisubrooks</a></td>
+                </tr>
+                <tr>
+                    <td>Kaori</td>
+                    <td>Kaorioka</td>
+                    <td><a href="http://github.com/Kaorioka">Kaorioka</a></td>
+                </tr>
+                <tr>
+                    <td>Henry</td>
+                    <td>SkylordRedstone</td>
+                    <td><a href="http://github.com/hedgehog1029">hedgehog1029</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+
+        <table class="table invert">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Alias</th>
+                    <th>GitHub User</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Kurisu</td>
+                    <td>kurisubrooks</td>
+                    <td><a href="http://github.com/kurisubrooks">kurisubrooks</a></td>
+                </tr>
+                <tr>
+                    <td>Kaori</td>
+                    <td>Kaorioka</td>
+                    <td><a href="http://github.com/Kaorioka">Kaorioka</a></td>
+                </tr>
+                <tr>
+                    <td>Henry</td>
+                    <td>SkylordRedstone</td>
+                    <td><a href="http://github.com/hedgehog1029">hedgehog1029</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <pre>&lt;table class="table"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;<span class="color error">...</span>&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;<span class="color error">...</span>&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+
+        <hr>
+
+        <h3 id="progress-bars">Progress Bars</h3>
+
+        <div class="row">
+            <div class="box col-4">
+                <div class="progress">
+                    <div class="progress-bar default" style="width:80%">
+                        <span class="progress-text">80%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box col-4">
+                <div class="progress">
+                    <div class="progress-bar success" style="width:19%">
+                        <span class="progress-text">19%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box col-4">
+                <div class="progress">
+                    <div class="progress-bar error" style="width:32%">
+                        <span class="progress-text">32%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box col-6">
+                <div class="progress">
+                    <div class="progress-bar warn" style="width:64%">
+                        <span class="progress-text">64%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box col-6">
+                <div class="progress">
+                    <div class="progress-bar info" style="width:48%">
+                        <span class="progress-text">48%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box col-12">
+                <div class="progress">
+                    <div class="progress-bar success" style="width:50%">
+                        <span class="progress-text">50%</span>
+                    </div>
+                    <div class="progress-bar error" style="width:30%">
+                        <span class="progress-text">30%</span>
+                    </div>
+                    <div class="progress-bar warn" style="width:10%">
+                        <span class="progress-text">10%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <pre>&lt;div class="progress"&gt;
+    &lt;div class="progress-bar <span class="color error">$color</span>" style="width:<span class="color error">50</span>%"&gt;
+        &lt;span class="progress-text"&gt;<span class="color error">50</span>%&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+        <hr>
+
+        <h3 id="pagination">Pagination</h3>
+
+        <nav class="nav pag">
+        	<ul>
+        		<li><a href="#"><i class="fa fa-caret-left"></i></a></li>
+        		<li><a href="#">1</a></li>
+        		<li><a href="#">2</a></li>
+        		<li><a href="#">3</a></li>
+        		<li><a href="#">4</a></li>
+        		<li><a href="#">5</a></li>
+        		<li><a href="#"><i class="fa fa-caret-right"></i></a></li>
+        	</ul>
+        </nav>
+
+        <pre>&lt;nav class="nav pag"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="<span class="color error">#</span>"&gt;<span class="color error">...</span>&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="<span class="color error">#</span>"&gt;<span class="color error">...</span>&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="<span class="color error">#</span>"&gt;<span class="color error">...</span>&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</pre>
+
+        <hr>
+
+        <h3 id="forms">Forms</h3>
+
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+        <input type="submit" class="btn info"><br>
+
+        <select>
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+        </select><br>
+
+        <textarea placeholder="Input Text Here"></textarea>
+
+        <pre>
+&lt;input type="text"&gt;
+
+&lt;input type="submit" class="btn <span class="color error">$color</span>"&gt;
+
+&lt;select&gt;
+    &lt;option&gt;<span class="color error">...</span>&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;textarea&gt;<span class="color error">...</span>&lt;/textarea&gt;</pre>
+
+        <hr>
+
+        <h3 id="grid">Grid</h3>
+        <div class="notice">
+            <b>Note:</b> You can do any combination of numbers as long as they add up to a maximum of 12.
+        </div><br>
+
+        <div class="row" id="example">
+            <div class="box col-1">col-1</div>
+            <div class="box col-1">col-1</div>
+            <div class="box col-1">col-1</div>
+            <div class="box col-1">col-1</div>
+            <div class="box col-1">col-1</div>
+            <div class="box col-1">col-1</div>
+            <div class="box col-1">col-1</div>
+            <div class="box col-1">col-1</div>
+            <div class="box col-1">col-1</div>
+            <div class="box col-1">col-1</div>
+            <div class="box col-1">col-1</div>
+            <div class="box col-1">col-1</div>
+            <br>
+
+            <div class="box col-2">col-2</div>
+            <div class="box col-2">col-2</div>
+            <div class="box col-2">col-2</div>
+            <div class="box col-2">col-2</div>
+            <div class="box col-2">col-2</div>
+            <div class="box col-2">col-2</div>
+            <br>
+
+            <div class="box col-3">col-3</div>
+            <div class="box col-6">col-6</div>
+            <div class="box col-3">col-3</div>
+            <br>
+
+            <div class="box col-3">col-3</div>
+            <div class="box col-3">col-3</div>
+            <div class="box col-3">col-3</div>
+            <div class="box col-3">col-3</div>
+            <br>
+
+            <div class="box col-4">col-4</div>
+            <div class="box col-4">col-4</div>
+            <div class="box col-4">col-4</div>
+            <br>
+
+            <div class="box col-6">col-6</div>
+            <div class="box col-6">col-6</div>
+            <br>
+
+            <div class="box col-8">col-8</div>
+            <div class="box col-4">col-4</div>
+            <br>
+
+            <div class="box col-12">col-12</div>
+            <br>
+        </div>
+
+        <pre>&lt;div class="row"&gt;
+    &lt;div class="box col-<span class="color error">6</span>"&gt;<span class="color error">...</span>&lt;/div&gt;
+    &lt;div class="box col-<span class="color error">6</span>"&gt;<span class="color error">...</span>&lt;/div&gt;
+&lt;/div&gt;</pre>
+
+        <br><br>
+
+        <h4>Full-Width Grid</h4><br>
+        <div class="row" id="example">
+            <div class="full col-1">col-1</div>
+            <div class="full col-1">col-1</div>
+            <div class="full col-1">col-1</div>
+            <div class="full col-1">col-1</div>
+            <div class="full col-1">col-1</div>
+            <div class="full col-1">col-1</div>
+            <div class="full col-1">col-1</div>
+            <div class="full col-1">col-1</div>
+            <div class="full col-1">col-1</div>
+            <div class="full col-1">col-1</div>
+            <div class="full col-1">col-1</div>
+            <div class="full col-1">col-1</div>
+            <br>
+
+            <div class="full col-2">col-2</div>
+            <div class="full col-8">col-8</div>
+            <div class="full col-2">col-2</div>
+            <br>
+
+            <div class="full col-2">col-2</div>
+            <div class="full col-4">col-4</div>
+            <div class="full col-2">col-2</div>
+            <div class="full col-4">col-4</div>
+        </div>
+
+        <pre>&lt;div class="row"&gt;
+    &lt;div class="full col-<span class="color error">6</span>"&gt;<span class="color error">...</span>&lt;/div&gt;
+    &lt;div class="full col-<span class="color error">6</span>"&gt;<span class="color error">...</span>&lt;/div&gt;
+&lt;/div&gt;</pre>
+
+        <hr>
+
+        <footer>
+            <p>&copy; 2015 <a href="http://lumios.xyz">LUMIOS</a> &mdash;
+            MADE WITH
+                <i class="fa fa-heart-o fa-fw" color="error"></i> &amp;
+                <i class="fa fa-code fa-fw" color="success"></i>
+            </p>
+        </footer>
+    </main>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/caramel.js"></script>
+</body>
+</html>
